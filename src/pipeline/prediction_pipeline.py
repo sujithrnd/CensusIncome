@@ -30,22 +30,23 @@ class Predictionpipeline:
         
 
 class CustomData:
-    def __init__(seld,                 
-                age            :int, 
+    def __init__(self,                 
+                age            :float, 
                 workclass      :str,
-                fnlwgt         :int ,
+                fnlwgt         :float,
                 education      :str,
-                education_num  :int ,
+                education_num  :float ,
                 marital_status :str,
                 occupation     :str,
                 relationship   :str,
                 race           :str,
                 sex            :str,
-                capital_gain   :int ,
-                capital_loss   :int ,
-                hours_per_week :int ,
+                capital_gain   :float ,
+                capital_loss   :float ,
+                hours_per_week :float ,
                 native_country :str):
                 #Class          :str):
+                
                 self.age            = age            
                 self.workclass      = workclass      
                 self.fnlwgt         = fnlwgt         
@@ -62,54 +63,26 @@ class CustomData:
                 self.native_country = native_country 
                 #self.Class        = Class
 
-    """
-                 carat:float,
-                 depth:float,
-                 table:float,
-                 x:float,
-                 y:float,
-                 z:float,
-                 cut:float,
-                 color:str,
-                 clarity:str):
-     
-        self.carat=carat
-        self.depth=depth
-        self.table=table
-        self.x=x
-        self.y=y
-        self.z=z
-        self.cut=cut
-        self.color=color
-        self.clarity=clarity"""
+    
 
     def  get_data_as_dataframe(self):
         try:
-            custom_data_input_dict1 = {
-                'carat':[self.carat],
-                'depth':[self.depth],
-                'table':[self.table],
-                 'x':[self.x],
-                 'y':[self.y],
-                 'cut':[self.cut],
-                  'color':[self.color],
-                  'clarity':[self.clarity]
-            }
+
             custom_data_input_dict = {
                 'age':[self.age],
                 'workclass':[self.workclass],
                 'fnlwgt':[self.fnlwgt],
-                 'education':[self.education],
-                 'education_num':[self.education_num],
-                 'marital_status':[self.marital_status],
-                  'occupation':[self.occupation],
-                  'relationship':[self.relationship],
-				  'race':[self.race],
-				  'sex':[self.sex],
-				  'capital_gain':[self.capital_gain],
-				  'capital_loss':[self.capital_loss],
-				   'hours_per_week':[self.hours_per_week],
-				    'native_country':[self.native_country]#,
+                'education':[self.education],
+                'education_num':[self.education_num],
+                'marital_status':[self.marital_status],
+                'occupation':[self.occupation],
+                'relationship':[self.relationship],
+				'race':[self.race],
+				'sex':[self.sex],
+				'capital_gain':[self.capital_gain],
+				'capital_loss':[self.capital_loss],
+				'hours_per_week':[self.hours_per_week],
+				'native_country':[self.native_country]#,
 					# 'Class':[self.Class]
             }	
             df=pd.DataFrame(custom_data_input_dict)
