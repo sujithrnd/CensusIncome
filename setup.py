@@ -15,7 +15,7 @@ def get_requirements(file_path:str)->List[str]:
 
 
 setup(
-    name='CensusIncome',
+    name='CreditCard',
     version='0.0.1',
     author='Sujith',
     author_email='sujithks81@gmail.com',
